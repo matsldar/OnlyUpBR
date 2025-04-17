@@ -1,3 +1,3 @@
 ### Development
 
-- Install git LFS
+- Install git LFS (https://git-lfs.github.com/)
