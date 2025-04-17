@@ -1,0 +1,3 @@
+### Development
+
+- Install git LFS
