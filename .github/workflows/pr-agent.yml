@@ -19,6 +19,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_BASE: "https://generativelanguage.googleapis.com/v1beta/openai/"
           CONFIG__MODEL: "gemini-2.0-flash"
+          CONFIG__CUSTOM_MODEL_MAX_TOKENS: 1048576
           github_action_config.auto_review: "false"
           github_action_config.auto_describe: "false"
           github_action_config.auto_improve: "false"
