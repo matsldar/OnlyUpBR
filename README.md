@@ -4,4 +4,6 @@
 
 Lol
 
+why is it lol there?
+
 - Then run `git lfs install`
