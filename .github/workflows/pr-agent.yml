@@ -1,3 +1,4 @@
+name: PR Agent
 on:
   pull_request:
   issue_comment:
@@ -9,17 +10,17 @@ jobs:
       issues: write
       pull-requests: write
       contents: write
-    name: Run pr agent on every pull request, respond to user comments
+    name: PR Agent
     steps:
       - name: PR Agent action step
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI.KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI.API_BASE: "https://generativelanguage.googleapis.com/v1beta/openai/"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_BASE: "https://generativelanguage.googleapis.com/v1beta/openai/"
-          CONFIG__MODEL: "gemini-2.0-flash"
-          CONFIG__CUSTOM_MODEL_MAX_TOKENS: 1048576
+          CONFIG.MODEL: "gemini-2.0-flash"
+          CONFIG.CUSTOM_MODEL_MAX_TOKENS: 1048576
           github_action_config.auto_review: "false"
           github_action_config.auto_describe: "false"
           github_action_config.auto_improve: "false"
