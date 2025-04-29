@@ -16,12 +16,8 @@ jobs:
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          OPENAI.KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENAI.API_BASE: "https://generativelanguage.googleapis.com/v1beta/openai/"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG.MODEL: "gemini-2.0-flash"
-          CONFIG.CUSTOM_MODEL_MAX_TOKENS: 1048576
-          CONFIG.AI_PROVIDER: "openai"
+          CONFIG__MODEL: "gemini/gemini-2.0-flash"
           github_action_config.auto_review: "false"
           github_action_config.auto_describe: "false"
           github_action_config.auto_improve: "false"
